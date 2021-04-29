@@ -302,10 +302,7 @@ export default {
   },
   mounted() {
     this.getAllTickers()
-
-  },
-  beforeRouteLeave() {
-
+    this.socketTick()
   }
 }
 </script>
