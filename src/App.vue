@@ -1,28 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="dark">
+  <header class="dark-bb">
+    <section id="header">
+      <navbar/>
+    </section>
+  </header>
+
+  <section id="app">
+    <router-view></router-view>
+  </section>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<style>
 
+</style>
+<script>
+import Navbar from "./views/layouts/Navbar";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  components: {Navbar},
+  mounted() {
+    document.querySelector('body').id = 'dark';
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
